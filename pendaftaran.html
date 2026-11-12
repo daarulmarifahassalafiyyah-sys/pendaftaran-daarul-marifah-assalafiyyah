@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pendaftaran Santri Baru | Daarul Ma'rifah</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7f1;
+    color: #26352b;
+}
+
+header {
+    background: #064d32;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+    border-bottom: 5px solid #d5ad42;
+}
+
+header img {
+    width: 95px;
+    height: 95px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+header h1 {
+    font-size: 23px;
+    color: #f3d477;
+}
+
+header p {
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+.container {
+    max-width: 750px;
+    margin: 30px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px #00000012;
+}
+
+h2 {
+    color: #075535;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.intro {
+    text-align: center;
+    color: #666;
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+.section-title {
+    background: #075535;
+    color: white;
+    padding: 12px;
+    margin: 22px 0 15px;
+    border-left: 5px solid #d5ad42;
+    border-radius: 4px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin: 14px 0 7px;
+    font-size: 14px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    background: white;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 85px;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background: #087444;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 25px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #064d32;
+}
+
+.note {
+    font-size: 12px;
+    color: #666;
+    margin-top: 12px;
+    line-height: 1.6;
+}
+
+footer {
+    background: #064d32;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 35px;
+    font-size: 13px;
+}
+
+@media(max-width:600px) {
+    .container {
+        margin: 15px;
+        padding: 18px;
+    }
+
+    header h1 {
+        font-size: 19px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <img src="LOGO.jpeg" >
+    
+    <h1>PONDOK PESANTREN</h1>
+    <h1>DAARUL MA'RIFAH AS-SALAFIYYAH</h1>
+
+    <p>Hajarsari, Kecamatan Ciawi, Kabupaten Bogor</p>
+</header>
+
+<div class="container">
+
+    <h2>FORMULIR PENDAFTARAN</h2>
+    <p class="intro">
+        Penerimaan Santri Baru Tahun Ajaran 2026/2027
+    </p>
+
+    <form id="formPendaftaran">
+
+        <div class="section-title">
+            A. DATA CALON SANTRI
+        </div>
+
+        <label>Nama Lengkap *</label>
+        <input type="text" id="nama" required>
+
+        <label>Tempat Lahir *</label>
+        <input type="text" id="tempat" required>
+
+        <label>Tanggal Lahir *</label>
+        <input type="date" id="tanggal" required>
+
+        <label>Jenis Kelamin *</label>
+        <select id="jk" required>
+            <option value="">-- Pilih --</option>
+            <option>Laki-laki</option>
+            <option>Perempuan</option>
+        </select>
+
+        <label>Alamat Lengkap *</label>
+        <textarea id="alamat" required></textarea>
+
+        <label>Asal Sekolah</label>
+        <input type="text" id="sekolah">
+
+        <label>Pendidikan Terakhir *</label>
+        <select id="pendidikan" required>
+            <option value="">-- Pilih --</option>
+            <option>SD/MI</option>
+            <option>SMP/MTs</option>
+            <option>SMA/MA</option>
+            <option>Lainnya</option>
+        </select>
+
+        <div class="section-title">
+            B. DATA ORANG TUA / WALI
+        </div>
+
+        <label>Nama Ayah *</label>
+        <input type="text" id="ayah" required>
+
+        <label>Nama Ibu *</label>
+        <input type="text" id="ibu" required>
+
+        <label>Nama Wali (Jika Ada)</label>
+        <input type="text" id="wali">
+
+        <label>Nomor WhatsApp Orang Tua / Wali *</label>
+        <input type="tel" id="hp"
+               placeholder="Contoh: 081234567890"
+               required>
+
+        <label>Pekerjaan Orang Tua</label>
+        <input type="text" id="pekerjaan">
+
+        <div class="section-title">
+            C. PILIHAN PENDIDIKAN
+        </div>
+
+        <label>Program Pendidikan *</label>
+        <select id="program" required>
+            <option value="">-- Pilih Program --</option>
+            <option>Program Pendidikan Pesantren</option>
+            <option>Program Tahfidz Al-Qur'an</option>
+            <option>Program Kajian Kitab Kuning</option>
+        </select>
+
+        <label>Pesan Tambahan</label>
+        <textarea id="pesan"
+                  placeholder="Tuliskan pesan jika ada"></textarea>
+
+        <p class="note">
+            * Wajib diisi. Pastikan data yang dimasukkan benar.
+            Dengan mengirim formulir ini, data akan diteruskan
+            kepada admin melalui WhatsApp untuk proses pendaftaran.
+        </p>
+
+        <button type="submit">
+            KIRIM PENDAFTARAN VIA WHATSAPP
+        </button>
+
+    </form>
+</div>
+
+<footer>
+    <p>
+        © 2026 Pondok Pesantren Daarul Ma'rifah
+        As-Salafiyyah
+    </p>
+    <p>Berilmu • Berakhlak • Beramal</p>
+</footer>
+
+<script>
+document.getElementById("formPendaftaran")
+.addEventListener("submit", function(e) {
+
+    e.preventDefault();
+
+    const data = {
+        nama: document.getElementById("nama").value,
+        tempat: document.getElementById("tempat").value,
+        tanggal: document.getElementById("tanggal").value,
+        jk: document.getElementById("jk").value,
+        alamat: document.getElementById("alamat").value,
+        sekolah: document.getElementById("sekolah").value,
+        pendidikan: document.getElementById("pendidikan").value,
+        ayah: document.getElementById("ayah").value,
+        ibu: document.getElementById("ibu").value,
+        wali: document.getElementById("wali").value,
+        hp: document.getElementById("hp").value,
+        pekerjaan: document.getElementById("pekerjaan").value,
+        program: document.getElementById("program").value,
+        pesan: document.getElementById("pesan").value
+    };
+
+    const pesan =
+`PENDAFTARAN SANTRI BARU
+DAARUL MA'RIFAH AS-SALAFIYYAH
+
+DATA CALON SANTRI
+Nama: ${data.nama}
+Tempat lahir: ${data.tempat}
+Tanggal lahir: ${data.tanggal}
+Jenis kelamin: ${data.jk}
+Alamat: ${data.alamat}
+Asal sekolah: ${data.sekolah}
+Pendidikan terakhir: ${data.pendidikan}
+
+DATA ORANG TUA / WALI
+Nama ayah: ${data.ayah}
+Nama ibu: ${data.ibu}
+Nama wali: ${data.wali}
+Nomor WhatsApp: ${data.hp}
+Pekerjaan: ${data.pekerjaan}
+
+PROGRAM PENDIDIKAN
+${data.program}
+
+Pesan tambahan:
+${data.pesan}`;
+
+    const nomorAdmin = "6285716441436";
+
+    const url = "https://wa.me/" + nomorAdmin +
+                "?text=" + encodeURIComponent(pesan);
+
+    window.open(url, "_blank");
+});
+</script>
+
+</body>
+</html>
